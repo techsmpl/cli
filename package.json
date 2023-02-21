@@ -1,0 +1,76 @@
+{
+  "name": "@techsmpl/cli",
+  "version": "1.4.0",
+  "description": "This is a CLI for SMPL Team",
+  "main": "./bin/cli-prod.js",
+  "private": false,
+  "files": [
+    "build",
+    "src",
+    "cli-prod.js",
+    "cli-dev.js",
+    "package.json",
+    "jsconfig.json",
+    ".babelrc",
+    ".npmignore",
+    "package-lock.json"
+  ],
+  "bin": {
+    "techsmpl-cli": "bin/cli-prod.js"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://opensource.org/licenses/MIT"
+    }
+  ],
+  "scripts": {
+    "start": "npx @babel/node",
+    "dev": "npx nodemon --exec npx @babel/node ./src/index.js dev --watch",
+    "build": "npx babel src --out-dir=./build --copy-files",
+    "production": "npm run build && node ./build/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Can Gökçeaslan",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/techsmpl/cli.git"
+  },
+  "keywords": [
+    "cli",
+    "techsmpl",
+    "smpl",
+    "smplteam",
+    "smpl-team",
+    "smplteam-cli",
+    "smpl-team-cli",
+    "hellosmpl",
+    "hello-smpl",
+    "hello-smpl-team",
+    "hello-smplteam",
+    "hello-smplteam-cli"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/techsmpl/cli/issues"
+  },
+  "homepage": "https://github.com/techsmpl/cli",
+  "devDependencies": {
+    "@babel/cli": "^7.20.7",
+    "@babel/core": "^7.20.12",
+    "@babel/node": "^7.20.7",
+    "@babel/preset-env": "^7.20.2",
+    "babel-plugin-module-resolver": "^5.0.0"
+  },
+  "dependencies": {
+    "@babel/register": "^7.18.9",
+    "aws-sdk": "^2.1311.0",
+    "axios": "^1.3.2",
+    "js-yaml": "^4.1.0",
+    "jsonwebtoken": "^9.0.0",
+    "lodash": "^4.17.21"
+  }
+}

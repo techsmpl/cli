@@ -1,0 +1,31 @@
+{
+    "presets": [
+        [
+            "@babel/preset-env",
+            {
+                "targets": {
+                    "node": "current"
+                }
+            }
+        ]
+    ],
+    "plugins": [
+        [
+            "module-resolver",
+            {
+                "root": [
+                    "./src"
+                ],
+                "alias": {
+                    "@bin": "./src/bin",
+                    "@configuration": "./src/configuration",
+                    "@utils": "./src/utils"
+                },
+                "extensions": [
+                    ".js",
+                    ".json"
+                ]
+            }
+        ]
+    ]
+}

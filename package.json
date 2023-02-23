@@ -1,6 +1,6 @@
 {
   "name": "@techsmpl/cli",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "description": "This is a CLI for SMPL Team",
   "main": "./bin/cli-prod.js",
   "private": false,

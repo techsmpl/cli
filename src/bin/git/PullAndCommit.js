@@ -10,14 +10,14 @@ phases:
                   nodejs: 16.x
       pre_build:
             commands:
-                  - cd "${data?.company}/${data?.scenarioId}"
+                  - cd "scenarios/${data?.company}/${data?.scenarioId}"
                   - npm install
       build:
             commands:
                   - npm run build
 artifacts:
       files:
-            - "${data?.company}/${data?.scenarioId}/build/*.js"
+            - "scenarios/${data?.company}/${data?.scenarioId}/build/*.js"
       discard-paths: no`
 
 export const ScenarioPullCreateBuildspectAndCommit = () => {
